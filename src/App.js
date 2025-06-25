@@ -4,7 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './App.css';
 import districtHistory from './data/districtHistory';
-import DistrictMap from './DistrictMap'; // ✅ file bản đồ cấp xã
+import DistrictMap from './DistrictMap'; // ✅ bản đồ cấp xã
 
 const COLORS = ['#e76f51', '#2a9d8f', '#f4a261', '#e9c46a', '#264653', '#8ecae6', '#90be6d'];
 
@@ -32,7 +32,7 @@ function DistrictLabels({ geoData }) {
 function App() {
   const [geoData, setGeoData] = useState(null);
   const [selectedDistrict, setSelectedDistrict] = useState(null);
-  const [viewDistrictKey, setViewDistrictKey] = useState(null); // ✅ Để chuyển giao diện
+  const [viewDistrictKey, setViewDistrictKey] = useState(null); // ✅ để hiển thị bản đồ xã
 
   useEffect(() => {
     fetch('./data/ninh_thuan_huyen_2024.geojson')
@@ -56,14 +56,18 @@ function App() {
     });
   };
 
-  // ✅ Nhấn nút "Xem bản đồ huyện này"
+  // ✅ Nhấn "Xem bản đồ huyện này"
   const handleViewDistrictMap = (districtName) => {
-    const key = districtName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") // xóa dấu
-      .replace(/[^a-z0-9]/g, '') + '_xa'; // → bacai_xa
-    setViewDistrictKey(key);
+    const key = districtName
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, '') // bỏ dấu tiếng Việt
+      .replace(/[^a-z0-9]/g, ''); // loại bỏ khoảng trắng, ký tự đặc biệt
+
+    setViewDistrictKey(key); // ✅ ví dụ: 'bacai'
   };
 
-  // ✅ Giao diện bản đồ cấp xã (DistrictMap)
+  // ✅ Giao diện bản đồ cấp xã
   if (viewDistrictKey) {
     return <DistrictMap districtKey={viewDistrictKey} onBack={() => setViewDistrictKey(null)} />;
   }
@@ -99,7 +103,7 @@ function App() {
         </MapContainer>
       </div>
 
-      {/* ✅ Hộp thông tin huyện */}
+      {/* ✅ Thông tin huyện */}
       {selectedDistrict && (
         <div className="district-info-box">
           <button className="close-btn" onClick={() => setSelectedDistrict(null)}>×</button>

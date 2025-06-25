@@ -227,3 +227,68 @@ html, body, #root {
   color: #666;
   margin-top: 8px;
 }
+.xa-history-table-wrapper {
+  margin: 30px auto;
+  max-width: 1100px;
+  padding: 20px;
+  background-color: #fffdf5;
+  border: 2px solid #d6a756;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.xa-table-title {
+  margin-bottom: 16px;
+  color: #523f2d;
+  font-size: 20px;
+  text-align: center;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.xa-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+}
+
+.xa-history-table th, .xa-history-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.xa-history-table th {
+  background-color: #f4e4ba;
+  color: #333;
+}
+
+.xa-history-table td {
+  background-color: #fff;
+}
+
+.xa-history-table tr:nth-child(even) td {
+  background-color: #fdfaf3;
+}
+.xa-info-box {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  width: 300px;
+  background: #fffef5;
+  border: 1px solid #d4c98e;
+  border-radius: 10px;
+  padding: 12px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.xa-info-box img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}

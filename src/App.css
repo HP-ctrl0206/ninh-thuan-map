@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  background-color: #f5efe6;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.header-title {
+  font-size: 26px;
+  color: #523f2d;
+  margin-bottom: 10px;
+}
+
+.explore-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.explore-button:hover {
+  background-color: #ff9900;
+}
+
+/* ✅ KHUNG BẢN ĐỒ NHỎ, NHƯ BAN ĐẦU */
+.map-frame {
+  width: 80%;
+  max-width: 1150px;
+  margin: auto;
+  background-color: #fff7e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  height: 720px;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* ✅ KHUNG CHỮ HUYỆN */
+.district-label {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+  display: inline-block;
+  width: fit-content;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+.district-info-box {
+  position: fixed;
+  top: 110px;
+  right: 20px;
+  width: 300px;
+  background-color: #fffef9;
+  border: 2px solid #d6a756;
+  border-radius: 10px;
+  padding: 15px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.district-info-box h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #523f2d;
+}
+
+.district-info-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.district-info-box pre {
+  white-space: pre-line;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #999;
+  cursor: pointer;
+}
+.district-info-box {
+  display: block !important;
+}
+.district-info-box {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: #fff8dc;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.district-info-box img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.district-info-box pre {
+  white-space: pre-line;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #444;
+}
+.view-district-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.view-district-button:hover {
+  background-color: #e68a00;
+}
+.back-button {
+  margin: 20px;
+  padding: 10px 15px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  background-color: #bbb;
+}
+.district-label {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+/* ✅ Khung bản đồ cấp xã (huyện) */
+.district-map-frame {
+  width: 75%;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #fffbe9;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 720px;
+}
+.xa-history-box {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 13px;
+  max-width: 250px;
+}
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+}
+.year-box {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px;
+  background-color: #fffbe6;
+  text-align: center;
+  flex: 1 0 45%;
+}
+.note {
+  font-style: italic;
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+}

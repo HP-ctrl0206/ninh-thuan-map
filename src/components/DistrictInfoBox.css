@@ -1,0 +1,42 @@
+.info-box {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 300px;
+  background: #fffdf5;
+  border: 2px solid #d8b46f;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  z-index: 999;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.info-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #523f2d;
+}
+
+.info-box img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.info-box pre {
+  font-size: 14px;
+  white-space: pre-wrap;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+}

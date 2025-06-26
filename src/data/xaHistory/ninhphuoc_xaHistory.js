@@ -9,7 +9,7 @@ const ninhphuocXaHistory = {
     },
     {
       name: "Phước Dân",
-      history: "Giữ nguyên từ 1975 đến nay",
+      history: "Giữ nguyên tên từ 1975 đến nay, thị trấn Phước Dân được hình thành từ xã Phước Dân (1993)",
       note: "Trung tâm hành chính huyện Ninh Phước (thị trấn)"
     },
     {
@@ -47,11 +47,6 @@ const ninhphuocXaHistory = {
       history: "Giữ nguyên từ 1975 đến nay",
       note: "Có nhiều di tích lịch sử, từng là căn cứ cách mạng"
     },
-    {
-      name: "Phước Nam",
-      history: "Giữ nguyên từ 1975 đến nay",
-      note: "Xã nằm giữa các vùng trọng điểm nông nghiệp"
-    }
   ]
 };
 

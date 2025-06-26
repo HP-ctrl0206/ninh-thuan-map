@@ -16,27 +16,27 @@ const ninhsonPopup = {
   },
   "Lương Sơn": {
     title: "Xã Lương Sơn",
-    landmark: "Núi Lương Sơn, miếu Ông Rừng, rừng khộp",
+    landmark: "Núi Lương Sơn, miếu Ông Rừng, rừng khộp, Tịnh Thất Liên Hoa",
     image: "/images/xas/luong_son.jpg"
   },
   "Ma Nới": {
     title: "Xã Ma Nới",
-    landmark: "Suối Ô, núi Ma Nới, nhà Gươl Ma Nới, cây cầu gỗ xưa qua suối Ma Nới",
+    landmark: "Thác Đá Bàn, núi Ma Nới, nhà Gươl Ma Nới, cây cầu gỗ xưa qua suối Ma Nới",
     image: "/images/xas/ma_noi.jpg"
   },
   "Mỹ Sơn": {
     title: "Xã Mỹ Sơn",
-    landmark: "Đồi cát Mỹ Sơn, miếu cổ Mỹ Sơn, vùng đất có mộ tổ họ Trần",
+    landmark: "Đồi cát Mỹ Sơn, miếu cổ Mỹ Sơn, vùng đất có mộ tổ họ Trần, chùa Cô Trang",
     image: "/images/xas/my_son.jpg"
   },
   "Nhơn Sơn": {
     title: "Xã Nhơn Sơn",
-    landmark: "Đập Nha Trinh, giếng cổ Nhơn Sơn, miếu Thành Hoàng Nhơn Sơn",
+    landmark: "Đập Nha Trinh, giếng cổ Nhơn Sơn, miếu Thành Hoàng Nhơn Sơn, ngôi đình Đắc Nhơn  ",
     image: "/images/xas/nhon_son.jpg"
   },
   "Quảng Sơn": {
     title: "Xã Quảng Sơn",
-    landmark: "Núi Đá Voi – hang Quảng Sơn, miếu Ông Bà, lễ hội Cúng rừng, rừng tre Quảng Sơn",
+    landmark: "Chùa Quảng Sơn, miếu Ông Bà, lễ hội Cúng rừng, rừng tre Quảng Sơn",
     image: "/images/xas/quang_son.jpg"
   }
 };

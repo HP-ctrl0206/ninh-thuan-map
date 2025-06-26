@@ -1,12 +1,12 @@
 const thuanbacPopup = {
   "Bắc Sơn": {
     title: "Bắc Sơn",
-    landmark: "Thôn Ma Oai, Suối Cát, Đá Hang",
+    landmark: "Thôn Ma Oai, Suối Cát, Đá Hang, cánh đồng điện gió và điện mặt trời Đầm Nại",
     image: "/images/xas/bac_son.jpg"
   },
   "Bắc Phong": {
     title: "Bắc Phong",
-    landmark: "Đình làng Bắc Phong, làng nghề nông cổ",
+    landmark: "Đình làng Bắc Phong, làng nghề nông cổ, tháp Hòa Lai",
     image: "/images/xas/bac_phong.jpg"
   },
   "Lợi Hải": {
@@ -16,7 +16,7 @@ const thuanbacPopup = {
   },
   "Công Hải": {
     title: "Công Hải",
-    landmark: "Đình Công Hải, miếu Cá Ông, lăng thờ Thủy Thần",
+    landmark: "Đình Công Hải, miếu Cá Ông, lăng thờ Thủy Thần, biển Bình Tiên, suối Lồ Ồ",
     image: "/images/xas/cong_hai.jpg"
   },
   "Phước Chiến": {
@@ -26,7 +26,7 @@ const thuanbacPopup = {
   },
   "Phước Kháng": {
     title: "Phước Kháng",
-    landmark: "Tục kể sử thi bằng tiếng Raglai, nghề đan gùi, làm nhạc cụ – vũ khí tre nứa",
+    landmark: "Tục kể sử thi bằng tiếng Raglai, nghề đan gùi, làm nhạc cụ – vũ khí tre nứa, suối Phước Kháng",
     image: "/images/xas/phuoc_khang.jpg"
   }
 };

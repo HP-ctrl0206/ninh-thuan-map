@@ -1,12 +1,12 @@
 const thuannamPopup = {
   "Phước Ninh": {
     title: "Xã Phước Ninh",
-    landmark: "Chùa Từ Quang, miếu Ông Cá, Gò Dài – Gò Vạt",
+    landmark: "Miếu Ông Cá, Gò Dài – Gò Vạt",
     image: "/images/xas/phuoc_ninh.jpg"
   },
   "Phước Diêm": {
     title: "Xã Phước Diêm",
-    landmark: "Mũi Dinh, đồi cát Nam Cương, miếu Bà Thiên Y A Na",
+    landmark: "Miếu Bà Thiên Y A Na, chùa Thương Diêm",
     image: "/images/xas/phuoc_diem.jpg"
   },
   "Cà Ná": {
@@ -16,22 +16,22 @@ const thuannamPopup = {
   },
   "Phước Nam": {
     title: "Xã Phước Nam",
-    landmark: "Di tích Chăm Pa Tháp, giếng cổ Phước Nam, miếu Ông – miếu Bà",
+    landmark: "Giếng cổ Phước Nam, miếu Ông – miếu Bà",
     image: "/images/xas/phuoc_nam.jpg"
   },
   "Phước Minh": {
     title: "Xã Phước Minh",
-    landmark: "Cánh đồng điện gió và điện mặt trời, cồn cát Trà Cang",
+    landmark: "Cánh đồng điện gió và điện mặt trời, đồng muối Quán Thẻ",
     image: "/images/xas/phuoc_minh.jpg"
   },
   "Phước Dinh": {
     title: "Xã Phước Dinh",
-    landmark: "Cánh đồng muối, Mũi Dinh – Cồn Cát Nam Cương",
+    landmark: "Cánh đồng muối, Mũi Dinh – bãi Tràng",
     image: "/images/xas/phuoc_dinh.jpg"
   },
   "Nhị Hà": {
     title: "Xã Nhị Hà",
-    landmark: "Núi Cà Đú, làng họ Chăm cổ, cầu đá Nhị Hà",
+    landmark: "Làng họ Chăm cổ, cầu đá Nhị Hà",
     image: "/images/xas/nhi_ha.jpg"
   },
   "Phước Hà": {

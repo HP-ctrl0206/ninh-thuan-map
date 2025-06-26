@@ -4,7 +4,7 @@ const ninhsonXaHistory = {
   entries: [
     {
       name: "Tân Sơn",
-      history: "Giữ nguyên từ 1975 đến nay",
+      history: "Thành lập năm 2000, giữ nguyên tên đến bây giờ",
       note: "Trung tâm huyện lỵ"
     },
     {
@@ -14,7 +14,7 @@ const ninhsonXaHistory = {
     },
     {
       name: "Lương Sơn",
-      history: "Giữ nguyên từ 1975 đến nay",
+      history: "Trước đây là một phần xã Tân Sơn, sau đổi tên xã Tân Sơn thành xã Lương Sơn, giữ nguyên tên đến bay giờ",
       note: "Địa hình bán sơn địa, là vùng chuyển tiếp giứa đồng bằng Ninh Sơn và cao nguyên Lâm Đồng"
     },
     {

@@ -6,42 +6,42 @@ const ninhphuocPopup = {
   },
   "Phước Sơn": {
     title: "Phước Sơn",
-    landmark: "Đình Phước Sơn, cầu sắt Phước Sơn",
+    landmark: "Đình Ninh Quý, cầu sắt Phước Sơn, chùa Thiên Ninh",
     image: "/images/xas/phuoc_son.jpg"
   },
   "Phước Hải": {
     title: "Phước Hải",
-    landmark: "",
+    landmark: "Lễ hội Ramưwan, lễ cúng đầu năm – ra đồng:",
     image: "/images/xas/phuoc_hai.jpg"
   },
   "An Hải": {
     title: "An Hải",
-    landmark: "Đồi Cát An Hải, giếng Trời",
+    landmark: "Đồi Cát Nam Cương, giếng Trời",
     image: "/images/xas/an_hai.jpg"
   },
   "Phước Thuận": {
     title: "Phước Thuận",
-    landmark: "Miếu Bà Thủy, khu mộ tổ họ Nguyễn, hồ Láng Đá",
+    landmark: "Miếu Bà Thủy, khu mộ tổ họ Nguyễn, hồ Láng Đá, chùa Phước Điền",
     image: "/images/xas/phuoc_thuan.jpg"
   },
   "Phước Hữu": {
     title: "Phước Hữu",
-    landmark: "Giếng đá cổ Hữu Đức, đền thờ Hữu Đức",
+    landmark: "Giếng đá cổ Hữu Đức, đền thờ Hữu Đức, lễ hội Katê",
     image: "/images/xas/phuoc_huu.jpg"
   },
   "Phước Hậu": {
     title: "Phước Hậu",
-    landmark: "Chùa Trùng Sơn Cổ Tự, khu Gò Mả Cựu",
+    landmark: "Đình Hoài Nhơn, chùa Trường Thọ",
     image: "/images/xas/phuoc_hau.jpg"
   },
   "Phước Thái": {
     title: "Phước Thái",
-    landmark: "Núi Ông, suối Đá Đen, miếu Chăm cổ",
+    landmark: "Núi đá trắng, núi đá đen",
     image: "/images/xas/phuoc_thai.jpg"
   },
   "Phước Vinh": {
     title: "Phước Vinh",
-    landmark: "Miếu Vạn (thờ cá Ông), giếng Đình",
+    landmark: "Hồ Lanh Ra, nhà thờ Phước An",
     image: "/images/xas/phuoc_vinh.jpg"
   }
 };

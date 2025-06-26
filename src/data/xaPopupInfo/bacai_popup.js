@@ -6,12 +6,12 @@ const bacaiPopup = {
   },
   "Phước Chính": {
     title: "Phước Chính",
-    landmark: "Làng truyền thống người Raglai, sử thi Raglai, di tích căn cứ cách mạng",
+    landmark: "Làng truyền thống người Raglai, di tích căn cứ cách mạng",
     image: "/images/xas/phuoc_chinh.jpg"
   },
   "Phước Đại": {
     title: "Phước Đại",
-    landmark: "Làng cổ người Raglai, không gian rừng - tín ngưỡng truyền thống",
+    landmark: "Làng cổ người Raglai, các không gian rừng - tín ngưỡng truyền thống",
     image: "/images/xas/phuoc_dai.jpg"
   },
   "Phước Hòa": {
@@ -21,7 +21,7 @@ const bacaiPopup = {
   },
   "Phước Tân": {
     title: "Phước Tân",
-    landmark: "Suối Tứ, dấu tích kháng chiến, lễ đâm trâu",
+    landmark: "Suối Tứ, các nơi có dấu tích kháng chiến, lễ đâm trâu",
     image: "/images/xas/phuoc_tan.jpg"
   },
   "Phước Tiến": {
@@ -41,7 +41,7 @@ const bacaiPopup = {
   },
   "Phước Trung": {
     title: "Phước Trung",
-    landmark: "Đá Suối, Tà Trao, giao liên tiếp tế thời kháng chiến",
+    landmark: "Đá Suối, Tà Trao, nơi giao liên tiếp tế thời kháng chiến",
     image: "/images/xas/phuoc_trung.jpg"
   }
 };

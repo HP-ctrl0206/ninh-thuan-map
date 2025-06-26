@@ -20,7 +20,7 @@ function XaHistoryTable({ xaHistoryData, selectedXa }) {
         <thead>
           <tr>
             <th>Tên xã hiện nay</th>
-            <th>Tên gọi từ 1975 đến nay</th>
+            <th>Sự thay đổi tên gọi và đơn vị hành chính từ 1975 đến nay</th>
             <th>Ghi chú</th>
           </tr>
         </thead>

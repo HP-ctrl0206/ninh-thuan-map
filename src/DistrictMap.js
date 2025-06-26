@@ -1,4 +1,3 @@
-// src/DistrictMap.js
 import React, { useEffect, useState } from "react";
 import { MapContainer, GeoJSON, useMap } from "react-leaflet";
 import * as L from "leaflet";
@@ -18,12 +17,12 @@ function FitBounds({ data }) {
   return null;
 }
 
-// ✅ Chuẩn hóa tên xã để so khớp dữ liệu
+// ✅ Hàm chuẩn hóa tên để khớp dữ liệu
 const normalizeName = (str) =>
   str
-    .normalize("NFD") // bỏ dấu
+    .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .replace(/\s+/g, "") // bỏ khoảng trắng
+    .replace(/\s+/g, "")
     .toLowerCase();
 
 function DistrictMap({ districtKey, onBack }) {
@@ -31,24 +30,48 @@ function DistrictMap({ districtKey, onBack }) {
   const [xaHistoryData, setXaHistoryData] = useState({});
   const [popupInfoData, setPopupInfoData] = useState({});
   const [selectedXa, setSelectedXa] = useState(null);
+  const [dataReady, setDataReady] = useState(false); // ✅ Cờ kiểm tra
 
-  // ✅ Nạp dữ liệu GeoJSON + bảng tên gọi + popup
+  // ✅ Load dữ liệu xã, popup, lịch sử
   useEffect(() => {
+    setDataReady(false); // reset khi districtKey thay đổi
+    let loaded = 0;
+
+    const checkReady = () => {
+      loaded++;
+      if (loaded === 3) setDataReady(true);
+    };
+
     fetch(`/data/xas/${districtKey}_xa.geojson`)
       .then((res) => res.json())
-      .then(setGeoData)
-      .catch((err) => console.error("Lỗi tải GeoJSON xã:", err));
+      .then((data) => {
+        setGeoData(data);
+        checkReady();
+      })
+      .catch(() => checkReady());
 
     import(`./data/xaHistory/${districtKey}_xaHistory.js`)
-      .then((module) => setXaHistoryData(module.default || {}))
-      .catch(() => setXaHistoryData({}));
+      .then((m) => {
+        setXaHistoryData(m.default || {});
+        checkReady();
+      })
+      .catch(() => {
+        setXaHistoryData({});
+        checkReady();
+      });
 
     import(`./data/xaPopupInfo/${districtKey}_popup.js`)
-      .then((module) => setPopupInfoData(module.default || {}))
-      .catch(() => setPopupInfoData({}));
+      .then((m) => {
+        setPopupInfoData(m.default || {});
+        checkReady();
+      })
+      .catch(() => {
+        setPopupInfoData({});
+        checkReady();
+      });
   }, [districtKey]);
 
-  // ✅ Gắn sự kiện cho từng xã
+  // ✅ Gắn sự kiện vào từng xã
   const onEachFeature = (feature, layer) => {
     const rawName = feature.properties.NAME_3 || "Xã";
     const displayName = rawName.replace(/([a-z])([A-Z])/g, "$1 $2");
@@ -87,12 +110,12 @@ function DistrictMap({ districtKey, onBack }) {
 
       <div className="district-map-frame">
         <MapContainer
-          style={{ height: "100%", width: "100%" }}
+          style={{ width: "100%", height: "100%" }}
           center={[11.73, 108.9]}
           zoom={11.5}
           scrollWheelZoom={true}
         >
-          {geoData && (
+          {geoData && dataReady && (
             <>
               <FitBounds data={geoData} />
               <GeoJSON
@@ -109,13 +132,12 @@ function DistrictMap({ districtKey, onBack }) {
           )}
         </MapContainer>
 
-        {/* ✅ Hộp thông tin xã khi click */}
+        {/* ✅ Hiển thị popup khi nhấn vào xã */}
         {selectedXa && (
           <div className="xa-info-box">
             <button className="close-btn" onClick={() => setSelectedXa(null)}>
               ×
             </button>
-
             <h3>{selectedXa.title || selectedXa.name}</h3>
 
             {selectedXa.image && (
@@ -137,14 +159,13 @@ function DistrictMap({ districtKey, onBack }) {
               </p>
             )}
 
-            {/* ✅ Địa danh & hoạt động nổi bật */}
             {selectedXa.landmark && (
               <p style={{ fontStyle: "italic", color: "#333" }}>
-                <strong>📍 Địa danh, hoạt động nổi bật:</strong> {selectedXa.landmark}
+                <strong>📍 Địa danh, hoạt động nổi bật:</strong>{" "}
+                {selectedXa.landmark}
               </p>
             )}
 
-            {/* ✅ Timeline lịch sử tên gọi nếu có */}
             {selectedXa.timeline && (
               <div>
                 <h4>Lịch sử tên gọi:</h4>
@@ -161,7 +182,7 @@ function DistrictMap({ districtKey, onBack }) {
         )}
       </div>
 
-      {/* ✅ Bảng tên gọi phía dưới */}
+      {/* ✅ Bảng tổng hợp tên xã */}
       <div style={{ marginTop: "20px" }}>
         <XaHistoryTable xaHistoryData={xaHistoryData} />
       </div>

@@ -18,7 +18,7 @@ function FitBounds({ data }) {
   return null;
 }
 
-// ✅ Hàm chuẩn hóa tên để khớp dữ liệu
+// ✅ Chuẩn hóa tên xã để so khớp dữ liệu
 const normalizeName = (str) =>
   str
     .normalize("NFD") // bỏ dấu
@@ -32,7 +32,7 @@ function DistrictMap({ districtKey, onBack }) {
   const [popupInfoData, setPopupInfoData] = useState({});
   const [selectedXa, setSelectedXa] = useState(null);
 
-  // ✅ Load dữ liệu xã
+  // ✅ Nạp dữ liệu GeoJSON + bảng tên gọi + popup
   useEffect(() => {
     fetch(`/data/xas/${districtKey}_xa.geojson`)
       .then((res) => res.json())
@@ -48,13 +48,12 @@ function DistrictMap({ districtKey, onBack }) {
       .catch(() => setPopupInfoData({}));
   }, [districtKey]);
 
-  // ✅ Gắn sự kiện vào từng xã
+  // ✅ Gắn sự kiện cho từng xã
   const onEachFeature = (feature, layer) => {
     const rawName = feature.properties.NAME_3 || "Xã";
-    const displayName = rawName.replace(/([a-z])([A-Z])/g, "$1 $2"); // PhướcBình -> Phước Bình
+    const displayName = rawName.replace(/([a-z])([A-Z])/g, "$1 $2");
     const nameKey = normalizeName(displayName);
 
-    // tìm khóa khớp trong popup & history
     const popupEntry = Object.entries(popupInfoData).find(
       ([key]) => normalizeName(key) === nameKey
     );
@@ -110,13 +109,15 @@ function DistrictMap({ districtKey, onBack }) {
           )}
         </MapContainer>
 
-        {/* ✅ Hộp popup hiện ra khi nhấn vào xã */}
+        {/* ✅ Hộp thông tin xã khi click */}
         {selectedXa && (
           <div className="xa-info-box">
-            <button className="close-btn" onClick={() => setSelectedXa(null)}>×</button>
+            <button className="close-btn" onClick={() => setSelectedXa(null)}>
+              ×
+            </button>
+
             <h3>{selectedXa.title || selectedXa.name}</h3>
 
-            {/* ✅ Ảnh nếu có */}
             {selectedXa.image && (
               <img
                 src={selectedXa.image}
@@ -130,21 +131,20 @@ function DistrictMap({ districtKey, onBack }) {
               />
             )}
 
-            {/* ✅ Mô tả nếu có */}
             {selectedXa.description && (
               <p style={{ whiteSpace: "pre-line", marginBottom: "10px" }}>
                 {selectedXa.description}
               </p>
             )}
 
-            {/* ✅ Địa danh */}
+            {/* ✅ Địa danh & hoạt động nổi bật */}
             {selectedXa.landmark && (
               <p style={{ fontStyle: "italic", color: "#333" }}>
-                <strong>📍 Địa danh nổi bật:</strong> {selectedXa.landmark}
+                <strong>📍 Địa danh, hoạt động nổi bật:</strong> {selectedXa.landmark}
               </p>
             )}
 
-            {/* ✅ Timeline nếu có */}
+            {/* ✅ Timeline lịch sử tên gọi nếu có */}
             {selectedXa.timeline && (
               <div>
                 <h4>Lịch sử tên gọi:</h4>
@@ -161,7 +161,7 @@ function DistrictMap({ districtKey, onBack }) {
         )}
       </div>
 
-      {/* ✅ Bảng tổng hợp ở dưới */}
+      {/* ✅ Bảng tên gọi phía dưới */}
       <div style={{ marginTop: "20px" }}>
         <XaHistoryTable xaHistoryData={xaHistoryData} />
       </div>

@@ -39,7 +39,7 @@ const ninhhaiPopup = {
     landmark: "Miếu thờ Cá Ông (Lăng Ông), tục rước ghe, dựng nêu, Hòn Đỏ",
     image: "/images/xas/thanh_hai.jpg"
   },
-  "Thị trấn Khánh Hải": {
+  "Khánh Hải": {
     title: "Thị trấn Khánh Hải",
     landmark: "Làng chài Khánh Hải, miếu thờ Cá Ông, bến cá cổ Đầm Nại, núi Cà Đú",
     image: "/images/xas/khanh_hai.jpg"
